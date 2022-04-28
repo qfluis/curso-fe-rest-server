@@ -19,8 +19,11 @@ class Server {
         // CORS - Cross Origin Resource Sharing
         this.app.use( cors() );
 
+        // Lectura y parseo body
+        this.app.use( express.json() );
+
         // Directorio público
-        this.app.use( express.static('public'));        
+        this.app.use( express.static('public')); 
 
     }
 
